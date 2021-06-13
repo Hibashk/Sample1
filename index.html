@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Animated Login Form</title>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <div class="container">
+         <header>Login</header>
+         <form>
+            <div class="input-field">
+               <input type="text" type="Username" required>
+               <label>Type your username</label>
+            </div>
+            <div class="input-field">
+               <input class="pswrd" type="password" required>
+               <span class="show">SHOW</span>
+               <label>Type your password</label>
+            </div>
+            <div class="button">
+               <div class="inner"></div>
+               <button>LOGIN</button>
+            </div>
+         </form>
+         <div class="auth">
+           <h6>Or sign up with</h6> 
+         </div>
+         <div class="socials">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google"></i></a>
+         </div>
+         <div class="signup">
+           <h6>Or Sign Up Using<BR><br> <a href="#">SIGN UP</a></h6>         </div>
+      </div>
+      <script>
+         var input = document.querySelector('.pswrd');
+         var show = document.querySelector('.show');
+         show.addEventListener('click', active);
+         function active(){
+           if(input.type === "password"){
+             input.type = "text";
+             show.style.color = "#1DA1F2";
+             show.textContent = "HIDE";
+           }else{
+             input.type = "password";
+             show.textContent = "SHOW";
+             show.style.color = "#111";
+           }
+         }
+          </script>
+      <div id="overlay-area"></div>
+   </body>
+   </html>
+  
